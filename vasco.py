@@ -25,9 +25,5 @@ if uploaded_file:
         st.subheader("Quantidade total de itens")
         qtd = df["quantidade"].sum()
         st.metric("Itens vendidos", f"{qtd:,}")
-
-    st.subheader("Gráfico de vendas por produto")
-    fig = px.bar(df, x="produto", y="vendas", color="produto")
-    st.plotly_chart(fig, use_container_width=True)
 else:
     st.info("Envie um arquivo CSV para iniciar a análise.")
