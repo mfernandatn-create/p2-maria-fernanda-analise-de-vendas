@@ -18,7 +18,7 @@ if uploaded_file:
 
     with col1:
         st.subheader("Total de vendas")
-        total = df["vendas"].sum()
+        total = df["valor"].sum()
         st.metric("Total vendido", f"R$ {total:,.2f}")
 
     with col2:
